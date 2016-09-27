@@ -1,8 +1,12 @@
 package fi.jamk.h3090.imageviewexercise;
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -38,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
 
         imageIndex = 0;
         showImage();
+    }
+
+    public void onChangeActivityClick(View view) {
+        startActivity(new Intent(MainActivity.this, MusicActivity.class));
     }
 
     public boolean onTouchEvent(MotionEvent event) {
